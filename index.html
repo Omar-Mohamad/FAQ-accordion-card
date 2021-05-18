@@ -16,18 +16,160 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
-    How many team members can I invite? You can invite up to 2 additional users
-    on the Free plan. There is no limit on team members for the Premium plan.
-    What is the maximum file upload size? No more than 2GB. All files in your
-    account must fit your allotted storage space. How do I reset my password?
-    Click “Forgot password” from the login page or “Change password” from your
-    profile page. A reset link will be emailed to you. Can I cancel my
-    subscription? Yes! Send us a message and we’ll process your request no
-    questions asked. Do you provide additional support? Chat and email support
-    is available 24/7. Phone lines are open during normal business hours.
+    <section class="FAQ-container">
+      <div class="card-container">
+        <!-- Illustration box -->
+
+        <img id="box" src="images/illustration-box-desktop.svg" alt="box" />
+
+        <div class="card-textcontent">
+          <h1 class="card-title">FAQ</h1>
+          <div class="question-group">
+            <div class="question">
+              <h3>How many team members can I invite?</h3>
+              <img
+                class="question-icon"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </div>
+
+            <div class="answer hidden">
+              <p>
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="question-group">
+            <div class="question">
+              <h3>What is the maximum file upload size?</h3>
+              <img
+                class="question-icon"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </div>
+
+            <div class="answer hidden">
+              <p>
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="question-group">
+            <div class="question">
+              <h3>How do I reset my password?</h3>
+              <img
+                class="question-icon"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </div>
+
+            <div class="answer hidden">
+              <p>
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="question-group">
+            <div class="question">
+              <h3>Can I cancel my subscription?</h3>
+              <img
+                class="question-icon"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </div>
+
+            <div class="answer hidden">
+              <p>
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="question-group">
+            <div class="question">
+              <h3>Do you provide additional support?</h3>
+              <img
+                class="question-icon"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </div>
+
+            <div class="answer hidden">
+              <p>
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-images">
+          <div class="card-image">
+            <!-- Illustration woman online -->
+
+            <img
+              id="woman-desktop"
+              src="images/illustration-woman-online-desktop.svg"
+              alt="Illustration woman online"
+            />
+            <img
+              id="woman-mobile"
+              src="images/illustration-woman-online-mobile.svg"
+              alt="Illustration woman online"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- text content -->
+
+    <!-- 
+Q1:How many team members can I invite?
+A1:You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+
+Q2:What is the maximum file upload size? 
+A2:No more than 2GB. All files in your account must fit your allotted storage space. 
+
+Q3:How do I reset my password?
+A3:Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you. 
+    
+Q4:Can I cancel my subscription? 
+A4:Yes! Send us a message and we’ll process your request no questions asked. 
+
+Q5:Do you provide additional support? 
+A5:Chat and email support is available 24/7. Phone lines are open during normal business hours. 
+  -->
 
     <!-- Javascript -->
     <script src="app.js"></script>

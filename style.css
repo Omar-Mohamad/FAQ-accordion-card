@@ -3,3 +3,284 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*
+==========
+Variables
+==========
+*/
+
+:root {
+  /*
+===============
+Primary Colors
+===============
+*/
+
+  --verydarkdesaturatedblue: hsl(238, 29%, 16%);
+  --softred: hsl(14, 88%, 65%);
+
+  /*
+===============
+Neutral Colors
+===============
+*/
+
+  --verydarkgrayishblue: hsl(237, 12%, 33%);
+  --darkgrayishblue: hsl(240, 6%, 50%);
+
+  /*
+====================
+Background gradient
+===================
+*/
+
+  --softviolet: hsl(273, 75%, 66%);
+  --softblue: hsl(240, 73%, 65%);
+
+  /*
+=========
+Dividers
+=========
+*/
+
+  --lightgrayishblue: hsl(240, 5%, 91%);
+}
+
+/*
+=================
+Project container
+=================
+*/
+
+.FAQ-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--softviolet), var(--softblue));
+  height: 100vh;
+}
+
+/*
+==============
+Card container
+==============
+*/
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 57.625rem;
+  height: auto;
+  background-color: white;
+  border-radius: 30px;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-size: 483px 472.5px;
+  background-repeat: no-repeat;
+  background-position: -18% center;
+  box-shadow: 0px 30px 25px 12px rgba(0, 0, 0, 0.5);
+}
+
+/*
+=========
+Card text
+=========
+*/
+
+.card-textcontent {
+  font-family: "Kumbh Sans";
+  padding: 5rem 3rem 1.9rem 0;
+}
+
+.card-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.question-group {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.question > h3 {
+  cursor: pointer;
+}
+
+.question > h3:hover {
+  color: var(--softred);
+}
+
+.question-icon {
+  cursor: pointer;
+  width: 13px;
+  height: 10px;
+  transition: all 0.3s ease-in;
+}
+
+.answer {
+  height: auto;
+  max-height: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.answer > p {
+  font-size: 0.9rem;
+}
+
+.card-textcontent > hr {
+  color: var(--lightgrayishblue);
+  margin-top: 1.5rem;
+}
+
+/*
+==============
+Desktop layout
+==============
+*/
+
+@media screen and (min-width: 1024px) {
+  /*
+=========
+Card text
+=========
+*/
+
+  .card-title {
+    margin-bottom: 1.5rem;
+  }
+
+  /*
+==========
+Card images
+==========
+*/
+
+  .card-images {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-image {
+    overflow: hidden;
+  }
+
+  #woman-desktop {
+    display: block;
+    transform: translateX(-5rem);
+  }
+
+  #woman-mobile {
+    display: none;
+  }
+
+  #box {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+/*
+=============
+Mobile layout
+=============
+*/
+
+@media screen and (max-width: 1024px) and (min-width: 320px) {
+  /*
+==============
+Card container
+==============
+*/
+
+  .card-container {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    width: 90vw;
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center 2%;
+  }
+
+  /*
+=========
+Card text
+=========
+*/
+
+  .card-title {
+    text-align: center;
+  }
+
+  .card-textcontent {
+    padding: 0;
+    transform: translateY(-15%);
+  }
+  .question-group {
+    width: auto;
+    padding: 0 15px;
+  }
+
+  .card-textcontent > hr {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+
+  /*
+===========
+Card images
+===========
+*/
+
+  #woman-desktop {
+    display: none;
+  }
+
+  #woman-mobile {
+    display: block;
+    transform: translate(-6%, -55%);
+  }
+
+  #box {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .FAQ-container {
+    align-items: flex-end;
+  }
+}
+
+.hidden {
+  padding-top: 0;
+  height: 0px;
+  visibility: hidden;
+}
+
+.show {
+  padding-top: 1.5rem;
+  height: 4rem;
+  visibility: visible;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
