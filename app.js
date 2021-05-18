@@ -1,16 +1,25 @@
-const icons = document.querySelectorAll(".question-icon"),
-  accordionBody = document.querySelectorAll(".answer"),
-  questions = document.querySelectorAll(".question h3");
+const questions = document.querySelectorAll(".question-group");
 
-icons.forEach(function (icon) {
+questions.forEach(function (question) {
+  const icon = question.querySelector(".question-icon");
+
   icon.addEventListener("click", function () {
-    icon.parentElement.parentElement.lastElementChild.classList.toggle("show");
-    icon.classList.toggle("rotate");
+    // question.classList.toggle("show");
+
+    questions.forEach(function (answer) {
+      if (answer !== question) {
+        answer.classList.remove("show");
+      }
+    });
+
+    question.classList.toggle("show");
   });
 });
 
-questions.forEach(function (question) {
-  question.addEventListener("click", function () {
-    question.parentElement.lastElementChild.click();
+const questionTitles = document.querySelectorAll(".question h3");
+
+questionTitles.forEach(function (questionTitle) {
+  questionTitle.addEventListener("click", function () {
+    questionTitle.parentElement.lastElementChild.click();
   });
 });

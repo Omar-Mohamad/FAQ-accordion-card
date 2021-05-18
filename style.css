@@ -73,8 +73,9 @@ Card container
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  width: 57.625rem;
-  height: auto;
+  width: 64%;
+  height: 510px;
+  min-width: 910px;
   background-color: white;
   border-radius: 30px;
   background-image: url(images/bg-pattern-desktop.svg);
@@ -92,30 +93,41 @@ Card text
 
 .card-textcontent {
   font-family: "Kumbh Sans";
-  padding: 5rem 3rem 1.9rem 0;
+  padding: 70px 0;
+  padding-right: 10%;
 }
 
 .card-title {
-  font-size: 2.5rem;
+  font-size: 33px;
   font-weight: 700;
+}
+
+.questions-container {
+  padding: 18px 0 0;
 }
 
 .question-group {
   display: flex;
   flex-direction: column;
   width: 25rem;
+  border-bottom: 1px solid rgba(120, 120, 135, 0.2);
+}
+
+#question5 {
+  border: none;
 }
 
 .question {
   display: flex;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  font-size: 1rem;
+  padding: 18px 0;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 
 .question > h3 {
   cursor: pointer;
+  color: var(--verydarkdesaturatedblue);
 }
 
 .question > h3:hover {
@@ -126,22 +138,19 @@ Card text
   cursor: pointer;
   width: 13px;
   height: 10px;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
 }
 
 .answer {
-  height: auto;
-  max-height: 4rem;
+  padding-top: 0;
+  height: 0px;
+  visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
 
 .answer > p {
   font-size: 0.9rem;
-}
-
-.card-textcontent > hr {
-  color: var(--lightgrayishblue);
-  margin-top: 1.5rem;
+  color: var(--darkgrayishblue);
 }
 
 /*
@@ -152,16 +161,6 @@ Desktop layout
 
 @media screen and (min-width: 1024px) {
   /*
-=========
-Card text
-=========
-*/
-
-  .card-title {
-    margin-bottom: 1.5rem;
-  }
-
-  /*
 ==========
 Card images
 ==========
@@ -170,9 +169,6 @@ Card images
   .card-images {
     display: flex;
     align-items: center;
-  }
-
-  .card-image {
     overflow: hidden;
   }
 
@@ -211,7 +207,9 @@ Card container
   .card-container {
     flex-direction: column-reverse;
     justify-content: space-around;
-    width: 90vw;
+    width: 70%;
+    height: 550px;
+    min-width: 350px;
     background-image: url(images/bg-pattern-mobile.svg);
     background-size: auto;
     background-repeat: no-repeat;
@@ -237,12 +235,6 @@ Card text
     padding: 0 15px;
   }
 
-  .card-textcontent > hr {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 1.5rem;
-  }
-
   /*
 ===========
 Card images
@@ -265,22 +257,16 @@ Card images
 
 @media screen and (max-width: 375px) {
   .FAQ-container {
-    align-items: flex-end;
+    align-items: center;
   }
 }
 
-.hidden {
-  padding-top: 0;
-  height: 0px;
-  visibility: hidden;
-}
-
-.show {
-  padding-top: 1.5rem;
-  height: 4rem;
+.show .answer {
+  padding: 0px 0px 16px;
+  height: 3.5rem;
   visibility: visible;
 }
 
-.rotate {
+.show .question-icon {
   transform: rotate(180deg);
 }
